@@ -39,11 +39,9 @@ from pybrain.supervised.trainers import BackpropTrainer
 trainer = BackpropTrainer(network, dataset=train_data, momentum=0.1, weightdecay=0.01, verbose=True)
 
 from pybrain.tools.validation import CrossValidator
-cv = CrossValidator(trainer=trainer, dataset=train_data, n_folds=5)
-cv.validate()
 
 # Train 300 times
-
+trainer.trainEpochs(100)
 # Calculate accuracy
 
 print(test_data['target'])
