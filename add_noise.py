@@ -141,11 +141,11 @@ def writeImages(noisyImages, data_type, kinds):
 Main Program
 """
 
-n_of_case = 1500
+n_of_case = 1000
 triangle_size = 0.5
 height = 10
 width = 10
-data_type = 'test'
+data_type = 'train'
 
 GenData.GenSet(data_type, n_of_case, triangle_size, height, width)
 
@@ -154,10 +154,9 @@ images, kinds = openImages(data_type) # @param : string url original image folde
 # @param 0: images the return of function openImage('url')
 # @param 1: 1 of 3 type of noise point, => [RAMDOM, ON_EDGE, NOT_ON_EDGE]
 # @param 2: 1 of 2 type of noise number => [int: the exact number of noise point; float: [0.0, 1.0] the percent of forceground points]
-"""
+
 noisyImages = addNoise(images, noiseType.RANDOM)
 writeImages(noisyImages, data_type, kinds)
 
 GenData.Convert2Csv(data_type, n_of_case, triangle_size, height, width)
-"""
 print("finish")

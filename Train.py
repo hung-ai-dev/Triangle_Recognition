@@ -41,7 +41,7 @@ trainer = BackpropTrainer(network, dataset=train_data, momentum=0.1, weightdecay
 from pybrain.tools.validation import CrossValidator
 
 # Train 300 times
-trainer.trainEpochs(100)
+trainer.trainEpochs(150)
 # Calculate accuracy
 
 print(test_data['target'])

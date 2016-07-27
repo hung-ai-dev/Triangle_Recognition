@@ -22,8 +22,8 @@ def GenSet(type, n_of_case, triangle_size, height, width):
             kind = 0 # other
         pts = []
         for j in range(n):
-            x = np.random.random_integers(0, height)
-            y = np.random.random_integers(0, width)
+            x = np.random.random_integers(0, height - 1)
+            y = np.random.random_integers(0, width - 1)
             pts.append((x, y))
 
         cv2.fillPoly(img, [np.array([pts])], 0)
