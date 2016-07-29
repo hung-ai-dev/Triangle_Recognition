@@ -60,3 +60,15 @@ def Convert2Csv(type, n_of_case, triangle_size, height, width):
             else:
                 gray_image = np.append(gray_image.ravel(), 0)
             target.writerow((gray_image))
+"""			
+n_of_case = 1000
+triangle_size = 0.5
+height = 10
+width = 10
+data_type = 'train'
+
+GenData.GenSet(data_type, n_of_case, triangle_size, height, width)
+
+GenData.Convert2Csv(data_type, n_of_case, triangle_size, height, width)
+print("finish")
+"""
